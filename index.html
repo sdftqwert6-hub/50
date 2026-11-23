@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Miu Tea — уютный магазин чая с котиками.">
+  <title>Miu Tea — маленькая чашка уюта</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">Бесплатная доставка от 12 000 ₸ <span>♡</span></div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Miu Tea — главная">
+      <span class="brand-mark">ฅ</span><span>miu<span class="brand-light">tea</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Главная навигация">
+      <a href="#collection">Коллекция</a>
+      <a href="#story">Наша история</a>
+      <a href="#ritual">Чайный ритуал</a>
+    </nav>
+    <button class="cart-button" id="cartButton" type="button" aria-label="Корзина">
+      Корзина <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="tiny-star">✳</span> ЧАЙ, ТЕПЛО И НЕМНОГО МУРЧАНИЯ</span>
+        <h1>Твоя маленькая<br><em>пауза счастья.</em></h1>
+        <p>Выбирай любимый чай, заваривай не спеша и пусть мир подождёт ещё пять минут.</p>
+        <a class="primary-button" href="#collection">Выбрать чай <span>↗</span></a>
+        <div class="hero-note"><span class="note-cat">🐈</span><span>Одобрено пушистыми<br>экспертами уюта</span></div>
+      </div>
+      <div class="hero-art" aria-label="Чашка чая и котик">
+        <div class="sun-shape"></div>
+        <div class="hero-caption caption-top">slow mornings<br>good tea</div>
+        <div class="tea-cup"><div class="tea-liquid"></div><div class="cup-cat">ฅ</div><div class="cup-handle"></div></div>
+        <div class="cat-illustration"><span class="cat-ear left"></span><span class="cat-ear right"></span><span class="cat-face">•ᴗ•</span><span class="cat-whiskers">⌁　⌁</span></div>
+        <div class="hero-caption caption-bottom">a little joy<br>in every cup ♡</div>
+        <span class="floating-leaf leaf-one">✿</span><span class="floating-leaf leaf-two">✳</span>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div><span>✿</span> Бережно отбираем</div>
+      <div><span>☁</span> Упаковываем с любовью</div>
+      <div><span>♡</span> Дарим уют каждый день</div>
+    </section>
+
+    <section class="collection section-wrap" id="collection">
+      <div class="section-heading">
+        <div><span class="eyebrow">НАШИ ЛЮБИМЧИКИ</span><h2>Найди свой <em>вкус.</em></h2></div>
+        <p>Небольшая коллекция чая<br>для больших моментов.</p>
+      </div>
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-art art-green"><span class="product-tag">нежный</span><span class="tea-emoji">🍵</span><span class="art-cat">ᓚᘏᗢ</span></div>
+          <div class="product-info"><div><h3>Матча облако</h3><p>Японская матча · 50 г</p></div><strong>4 900 ₸</strong></div>
+          <button class="add-button" type="button" data-product="Матча облако">Добавить в корзину <span>＋</span></button>
+        </article>
+        <article class="product-card">
+          <div class="product-art art-peach"><span class="product-tag">любимый</span><span class="tea-emoji">🫖</span><span class="art-cat">ฅ^•ﻌ•^ฅ</span></div>
+          <div class="product-info"><div><h3>Персиковый сон</h3><p>Улун с персиком · 70 г</p></div><strong>3 800 ₸</strong></div>
+          <button class="add-button" type="button" data-product="Персиковый сон">Добавить в корзину <span>＋</span></button>
+        </article>
+        <article class="product-card">
+          <div class="product-art art-lilac"><span class="product-tag">вечерний</span><span class="tea-emoji">🌸</span><span class="art-cat">=^._.^=</span></div>
+          <div class="product-info"><div><h3>Лавандовый вечер</h3><p>Травяной сбор · 45 г</p></div><strong>3 500 ₸</strong></div>
+          <button class="add-button" type="button" data-product="Лавандовый вечер">Добавить в корзину <span>＋</span></button>
+        </article>
+      </div>
+      <p class="cart-message" id="cartMessage" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="story" id="story">
+      <div class="story-art"><div class="story-circle">♡</div><div class="story-cat">ᓚᘏᗢ</div><span class="story-spark">✳</span></div>
+      <div class="story-copy"><span class="eyebrow">ПРИВЕТ ОТ НАС И КОТИКА</span><h2>Уют — это<br><em>простые вещи.</em></h2><p>Miu Tea родился из любви к красивым мелочам: тёплой чашке в ладонях, тихому вечеру и котику, который всегда рядом. Мы собираем чай, который помогает замедлиться и почувствовать момент.</p><a class="text-link" href="#ritual">Узнать наш секрет <span>↗</span></a></div>
+    </section>
+
+    <section class="ritual section-wrap" id="ritual">
+      <span class="eyebrow">МАЛЕНЬКИЙ РИТУАЛ</span>
+      <h2>Завари. Выдохни. <em>Улыбнись.</em></h2>
+      <p>Налей горячую воду, дай листьям раскрыться и устрой себе минутку тишины.</p>
+      <div class="ritual-cat">ฅ(＾・ω・＾ฅ)</div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand" href="#"><span class="brand-mark">ฅ</span><span>miu<span class="brand-light">tea</span></span></a><span>С теплом, Miu Tea ♡</span><span>© 2026</span></footer>
+</body>
+</html>

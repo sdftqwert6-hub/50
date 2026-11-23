@@ -1,0 +1,12 @@
+{
+  "name": "miu-tea-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Минималистичный магазин чая с котиками",
+  "scripts": {
+    "lint": "eslint script.js"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0"
+  }
+}
