@@ -1,3 +1,4 @@
+
 name: Website validation
 
 on:
@@ -12,17 +13,19 @@ jobs:
 
     steps:
       - name: Get project files
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Check required files
         run: |
           test -f index.html
           test -f style.css
           test -f script.js
-          echo "All required website files are present."
+          test -f package.json
+          test -f eslint.config.js
+          echo "All required files are present."
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 22
 
