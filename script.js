@@ -9,14 +9,18 @@ const selectedProducts = [];
 addButtons.forEach((button) => {
     button.addEventListener("click", () => {
         const productName = button.dataset.product;
+
         if (!productName) {
             return;
         }
 
         cartItems += 1;
         selectedProducts.push(productName);
+
         cartCount.textContent = String(cartItems);
-        cartMessage.textContent = `${productName} добавлен в корзину. Спасибо за выбор! ♡`;
+        cartMessage.textContent =
+            `${productName} добавлен в корзину. Спасибо за выбор! ♡`;
+
         button.innerHTML = "Добавлено <span>✓</span>";
         button.classList.add("is-added");
     });
@@ -24,11 +28,13 @@ addButtons.forEach((button) => {
 
 cartButton.addEventListener("click", () => {
     if (selectedProducts.length === 0) {
-        cartMessage.textContent = "Ваша корзина пока пуста. Выберите любимый чай ♡";
+        cartMessage.textContent =
+            "Ваша корзина пока пуста. Выберите любимый чай ♡";
         return;
     }
 
     const uniqueProducts = [...new Set(selectedProducts)];
-    cartMessage.textContent = `В корзине: ${cartItems}. ${uniqueProducts.join(", ")}.`;
+
+    cartMessage.textContent =
+        `В корзине: ${cartItems}. ${uniqueProducts.join(", ")}.`;
 });
-const test = ;
